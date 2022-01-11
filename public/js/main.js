@@ -26,6 +26,7 @@ Threedot.addEventListener('click', () => {
 })
 SendBtn.addEventListener('click', () => {
   btn._init();
+  sendMessage(textarea.value);
 })
 
 window.addEventListener('keyup', (e) => {
