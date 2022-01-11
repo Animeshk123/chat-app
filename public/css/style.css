@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatBox {
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+  height: 90vh;
+  margin: 5vh 0;
+  background-color: white;
+  overflow-x: hidden;
+  box-shadow: 0px 0px 6px rgba(155, 155, 155, 1);
+}
+
+.chatBox_header {
+  width: 100%;
+  height: auto;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  box-shadow: 0px 1px 3px rgba(155, 155, 155, 1);
+}
+
+.chatBox_header span {
+  font-size: 1.5rem;
+}
+
+.chatBox_header .chatBox_header_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatBox_header .chatBox_header_info .chatBox_header_info_logo {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background-color: orangered;
+  margin-right: 1rem;
+}
+
+.chatBox_header .chatBox_header_info .chatBox_header_info_info p {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.chatBox_header .chatBox_header_info .chatBox_header_info_info small {
+  text-transform: uppercase;
+  color: dodgerblue;
+  font-weight: 500;
+}
+
+.chatBox .chatBox_body {
+  width: 100%;
+  min-height: 60%;
+  height: 100%;
+  max-height: 65%;
+  padding: 0.8rem 1rem;
+  overflow-y: auto;
+}
+
+.message {
+  width: max-content;
+  max-width: 80%;
+  height: max-content;
+  padding: 1rem 1.2rem;
+  border-radius: 17px;
+  margin-bottom: 1.2rem;
+  text-transform: capitalize;
+  display: block;
+}
+
+.message p {
+  line-height: 1.5;
+}
+
+.send {
+  background-color: rgba(155, 155, 155, 0.2);
+  margin-left: auto;
+}
+
+.recived {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.chatBox .chatBox_footer {
+  width: 100%;
+  height: 17%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 4px rgba(155, 155, 155, 1);
+}
+
+.chatBox .chatBox_footer #text {
+  width: 100%;
+  padding: 0.74rem 1.2rem;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: whitesmoke;
+  font-size: 1rem;
+  font-weight: 400;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  resize: none;
+}
+
+.chatBox .chatBox_footer #text::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.chatBox .chatBox_footer button {
+  display: none;
+}
+
+
+@media screen and (max-width:500px) {
+  body {
+    display: block !important;
+  }
+
+  .chatBox {
+    width: 100% !important;
+    height: 100vh !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+
+  .chatBox .chatBox_body {
+    max-height: 81%!important;
+  }
+
+  .chatBox .chatBox_footer {
+    height: 10%!important;
+    padding: 0.6rem 0.7rem!important;
+  }
+  .chatBox .chatBox_footer #text{
+    border:none!important;
+    padding: 0.5rem 1rem!important;
+    background-color: white;
+    border-radius: 5px;
+    resize: none;
+    width: 85%!important;
+  }
+  .chatBox .chatBox_footer button{
+    display: block;
+    padding: 0.3rem 0.6rem;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: dodgerblue;
+    font-size: 1.5rem;
+  }
+}
+
+.main {
+      opacity: 0;
+      transform: scale(0);
+      pointer-events: none;
+      animation: touch ease-in;
+    }
+
+    @keyframes touch {
+      0% {
+        transform: scale(3.5);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(6);
+      }
+
+      100% {
+        transform: scale(10);
+        opacity: 0;
+      }
+    }
+    
+    .message_header{
+      width: 100%;
+      height: auto;
+      background-color: white;
+      color: black;
+      text-align: center;
+      font-size: 0.7rem;
+    }
